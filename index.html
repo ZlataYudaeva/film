@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>фильм</title>
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+	background-color: rgb(46, 10, 43);
+    margin: 0;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.main {
+	max-width: 1280px;
+    margin: 40px auto;
+}
+
+h1 {
+	color: #18c6f1;
+	border: solid 1px #14e4f3;
+	text-align: center;
+	border-radius: 0 30px 0 30px;
+	margin: 0;
+    margin-bottom: 32px;
+}
+
+h1:hover {
+	color: black;
+	border: solid 1px black;
+	background-color: #e80ac3;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.poster {
+	display: flex;
+    flex-direction: column;
+}
+
+.poster img {
+	margin-bottom: 32px;
+}
+
+.poster video {
+	width: 360px;
+	height: 260px;
+	outline: none;
+}
+
+.video-sub-title {
+	font-size: 13px;
+	color: #ffffff66;
+}
+
+.social-network {
+	display: flex;
+}
+
+.social-network li {
+	margin-right: 20px;
+}
+
+.social-network li:nth-child(1) a {
+	display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../img/vk.png');
+}
+
+.social-network li:nth-child(2) a {
+	display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../img/fb.png');
+}
+
+.social-network li:nth-child(3) a {
+	display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../img/tw.png');
+}
+
+.social-network li:nth-child(4) a {
+	display: block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../img/inst.png');
+}
+
+.button {
+	padding: 11px 32px;
+    color: #fff;
+    border: 0;
+	border-radius: 4px;
+	background-color: rgb(0, 247, 255);
+}
+
+.button:hover {
+	background-color: #f200a1;
+}
+
+.ks-points {
+	color: #093;
+	font-size: 32px;
+}
+
+.imdb-points {
+	height: 480px;
+	width: 360px;
+	font-size: 32px;
+}
+
+.title {
+	display: flex;
+    flex-direction: row;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.title .title-head {
+	width: 630px;
+}
+
+.title .title-head h2 span {
+	font-size: 36px;
+}
+
+.title .title-head h2 .title-name {
+	display: block;
+}
+
+.title div:nth-child(1) h2 .title-age a {
+	color: #fff;
+	border-bottom: 1px solid hsla(0,0%,100%,.3);
+}
+
+.sub-title span {
+	color: hsla(0,0%,100%,.6);
+}
+
+.sub-title span:nth-child(1) {
+    margin-right: 13px;
+    font-size: 18px;
+}
+
+.sub-title span:nth-child(2) {
+	padding: 1px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    border-radius: 3px;
+    color: hsla(0,0%,100%,.4);
+    border: 1px solid hsla(0,0%,100%,.4);
+}
+
+.description {
+	margin: 32px 0;
+}
+
+.information {
+	display: flex;
+    flex-direction: row;
+	align-items: flex-start;
+	color: #fff;
+}
+
+.information div:nth-child(1) {
+	width: 630px;
+}
+
+.information div:nth-child(2) img {
+	display: block;
+	margin: 0 auto;
+}
+
+.series {
+	list-style: none;
+}
+
+.series li {
+	padding: 10px 0;
+	border-bottom: 1px solid #ffffff1a;
+}
+
+.tags {
+	display: inline-block;
+	width: 250px;
+	color: #ffffff99;
+}
+
+.link {
+	color: #fff;
+	cursor: pointer;
+}
+
+.link:hover {
+	color: rgb(255, 0, 191);
+}
+
+.main-roles {
+	color: #fff;
+}
+
+.actors li {
+	margin-bottom: 7px;
+}
+
+.actors li:last-child a {
+	color: rgb(255, 0, 234);
+}
+
+.additional-material {
+    display: flex;
+}
+
+.related-movies {
+    display: flex;
+    flex-direction: column;
+}
+
+.related-movies h3 a {
+	color: #fff;
+}
+
+.related-movies h3 a span {
+	color: #ffffff99;
+	margin-left: 8px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.card a {
+    display: flex;
+    flex-direction: column;
+}
+
+.card a img {
+    width: 140px;
+    height: 210px;
+}
+
+
+
+.film-facts .fact {
+	color: #ffffff99;
+	list-style: disc;
+	padding: 16px 0 16px 24px;
+}
+</style>
+
+<body>
+    <div class="main">
+
+        <h1>PATRIK</h1>
+
+        <div class="conteiner">
+
+            <div class="poster">                
+                <img src="https://www.moviemedia.it/wp-content/uploads/2019/07/locandina.jpg">
+
+                <video autoplay controls loop poster="https://avatars.mds.yandex.net/get-kino-vod-films-gallery/69336/1a14976935047b1567343a58bf0b3fe9/280x178_2">
+                    <source src="video/Патрик (2018).mp4">
+                </video>
+
+                <span class="video-title">Трейлер (дублированный)</span>
+                <span class="video-sub-title">24 августа 2018</span>
+
+                <ul class="social-network">
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="title">
+                    <div class="title-head">
+                        <h2>
+                            <span class="title-name">
+                                Патрик
+                            </span>
+                            <span class="title-age">
+                                (фильм 
+                                <a href="https://www.kinopoisk.ru/film/859908/episodes/">
+                                    2018
+                                </a>
+                                )
+                            </span>
+                        </h2>
+    
+                        <div class="sub-title">
+                            <span>Patrick</span>
+                            <span>12+</span>
+                        </div>
+    
+                        <p class="description">
+                            Сара никак не может привести свою жизнь в порядок: карьера не складывается, личная жизнь полна разочарований, а родители относятся с пренебрежением. Последнее, что ей сейчас нужно - это избалованный и капризный мопс по имени Патрик, который буквально врывается в жизнь бедной девушки. Но если люди не смогли стать для Сары друзьями, может, это получится у собаки?
+                        </p>
+
+                        <a href="https://www.kinopoisk.ru/film/1011011/" class="button" target="__blank">КиноПоиск</a>
+                    </div>
+
+                    <div>
+                        <h2>Рейтинг сериала</h2>
+
+                        <ul>
+                            <li>
+                                КиноПоиск: <span class="ks-points">6.5</span>
+                            </li>
+                            <li>
+                                IMDb: <span class="imdb-points">8.60</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="information">
+                    <div>
+                        <h2>О сериале</h2>
+                        <ul class="series">
+                            <li>
+                                <span class="tags">Год производства</span>
+                                <span class="link">2018</span>
+                            </li>
+                            <li>
+                                <span class="tags">Страна</span>
+                                <span class="link">Великобритания</span>                
+                            </li>
+                            <li>
+                                <span class="tags">Жанр</span>
+                                <span class="link">комедия</span>
+                            </li>
+                            <li>
+                                <span class="tags">Слоган</span>
+                                <span class="tags">«Pug... Actually»</span>
+                            </li>
+                            <li>
+                                <span class="tags">Режиссер</span>
+                                <span class="link">Мэнди Флетчер</span>
+                            </li>
+                            <li>
+                                <span class="tags">Сценарий</span>
+                                <span class="link">Ванесса Дэвис</span>, 
+                                <span class="link">Пол де Воз</span>, 
+                                <span class="link">Мэнди Флетчер</span>
+                            </li>
+                            <li>
+                                <span class="tags">Продюсер</span>
+                                <span class="link">Флавио Колотта</span>, 
+                                <span class="link">Ванесса Дэвис</span>
+                            </li>
+                            <li>
+                                <span class="tags">Оператор</span>
+                                <span class="link">Крис Гуджер</span>
+                            </li>
+                            <li>
+                                <span class="tags">Композитор</span>
+                                <span class="link">Майкл Прайс</span>
+                            </li>
+                            <li>
+                                <span class="tags">Художник</span>
+                                <span class="link">Гарри Бэнкс</span>, 
+                                <span class="link">Nikki Startup</span>, 
+                                <span class="link">Дженни Беван</span>
+                            </li>
+                            <li>
+                                <span class="tags">Монтаж</span>
+                                <span class="link">Мэттью Такер</span>
+                            </li>
+                            <li>
+                                <span class="tags">Премьера в Росcии</span>
+                                <span class="link">11 октября 2018</span>
+                            </li>
+                            <li>
+                                <span class="tags">Премьера в мире</span>
+                                <span class="link">28 июня 2018</span>
+                            </li>
+                            <li>
+                                <span class="tags">Возраст</span>
+                                12+
+                            </li>
+                            <li>
+                                <span class="tags">Время</span>
+                                94 мин.        
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2>
+                            <a href="https://www.kinopoisk.ru/film/1011011/cast/" class="main-roles">В главных ролях</a>
+                        </h2>
+                        <ul class="actors">
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/2341172/" class="link">Битти Эдмондсон</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/2479558/" class="link">Эд Скрейн</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/1125408/" class="link">Том Беннетт</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/1764351/" class="link">Сэм Флетчер</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/50899/" class="link">Руперт Холидэй-Эванс</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/77797/" class="link">Энн Квинсберри</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/518846/" class="link">Джейсон Льюис</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/1512803/" class="link">Катажина Колечек</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/65744/" class="link">Патриция Поттер</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/name/1991292/" class="link">Бен Родди</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kinopoisk.ru/film/1011011/cast/">54 актера</a>
+                            </li>
+                        </ul>
+
+                        <img src="https://st.kp.yandex.net/images/movies/awardGoldenGlobe.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-material">
+            <div class="related-movies">
+                <h3>
+                    <a href="https://www.kinopoisk.ru/film/859908/like/">
+                        Если вам понравился этот сериал
+                        <span>4</span>
+                    </a>
+                </h3>
+
+                <div class="cards">
+                    <div class="card">
+                        <a href="https://www.kinopoisk.ru/film/395036/">
+                            <img src="https://vokrug-tv.ru/pic/product/e/c/c/e/ecce1445998210caa13ff963f527a840.jpg" alt="отель">
+                            <span>Отель для собак</span>
+                        </a>
+    
+                        <span>2009, комедия</span>
+                    </div>
+    
+                    <div class="card">
+                        <a href="https://www.kinopoisk.ru/film/3892/">
+                            <img src="https://upload.wikimedia.org/wikipedia/ru/3/3a/Cats_and_dogs_the_revenge_of_kitty_galore_poster.jpg" alt="животные">
+                            <span>Кошки против собак</span>
+                        </a>
+                        
+                        <span>2001, комедия</span>
+                    </div>
+    
+                    <div class="card">
+                        <a href="https://www.kinopoisk.ru/film/1253988/">
+                            <img src="https://thumbs.dfs.ivi.ru/storage33/contents/2/7/5687e213dd1b64e79d4ebfc5ce37c6.jpg" alt="животные">
+                            <span>Моя собака идиот</span>
+                        </a>
+                        
+                        <span>2019, комедия</span>
+                    </div>
+    
+                    <div class="card">
+                        <a href="https://www.kinopoisk.ru/film/571896/">
+                            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/9ecb0974-ad01-4fde-9067-c6d147b880f4/600x900" alt="животные">
+                            <span>Собачья жизнь</span>
+                        </a>
+                        
+                        <span>2017, комедия</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="film-facts">
+                <h3>Знаете ли вы, что…</h3>
+    
+                <ul class="facts">
+                    <li class="fact">
+                        <a href=""> Бетти Эдмондсон</a>
+                        реальная дочь актрисы
+                        <a href="">Дженнифер Сондерс.</a>
+                    </li>
+
+                    <li class="fact">
+                        Собарл с прокатов фильм $ 2 931 960.
+                    </li>
+                    
+                    <li class="fact">
+                        Бюджет фильма составлял $ 6 200 000.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
